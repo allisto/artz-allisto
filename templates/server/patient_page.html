@@ -1,14 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en-Us">
     <head >
         <title>ABC</title>
-        <link rel="stylesheet" href="style2.css"/>
+        <link rel="stylesheet" type="text/css" href="{% static "css/patient-styles.css" %}"/>
      </head>
 
 <body>
 <div id="container">
    <span class="tbles" >
-        <img src="human1.jpg"/>
+        <img src="{% static 'img/human_pic.jpg' %}"/>
     <table id="t1">
        <caption><b>Parent's Details</b></caption>
         <tr>
@@ -40,11 +42,11 @@
             <td>2</td>
         </tr>
     </table>
-  
+
 </span>
 
     <span class="tbles" id="patient" >
-            <img src="human1.jpg"/>
+            <img src="{% static 'img/human_pic.jpg' %}"/>
             <span class="in">
     <table id="t2" >
         <caption><b>Patient's Details</b></caption>
@@ -67,7 +69,7 @@
      </table>
      </span>
     </span>
-  </div> 
+  </div>
   <div id="footerdiv">
         <footer>
             <center>
@@ -79,7 +81,7 @@
             <a href="contactus.html"  target="self" rel="author"><font color="white" class="foot" color="white">Contact</font></a>
             <br/>
             <br/>
-            
+
         </center>
         </footer>
         </div>

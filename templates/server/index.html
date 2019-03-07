@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-Us">
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}"/>
+</head>
+
+<body>
+
+<div id="divTag">
+
+        <span>
+            <a herf="SignUp.html">
+           <button class="buttonsfirst" style="float:right">Logout</button>
+           </a>
+        </span>
+
+        <span>
+            <center>
+               <input type="search" placeholder="Search" id="search">
+            </center>
+        </span>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone no.</th>
+            <th>Email</th>
+            <th>Aadhar Number</th>
+            <th>Address</th>
+
+        </tr>
+        {% for parent in parents %}
+        <tr>
+            <td><a href=##" target="_blank">{{ parent.pk }}</a></td>
+            <td><a href="#" target="_blank">{{ parent.name }}</a></td>
+
+            <td>{{ parent.phone_number }}</td>
+            <td>{{ parent.email }}</td>
+            <td>{{ parent.aadhar_number }}</td>
+            <td>{{ parent.address }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+
+</body>
+</html>
+
